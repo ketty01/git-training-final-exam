@@ -18,7 +18,7 @@ function drawSnowFlakeLine(context, x0, y0, angle0, length, deep) {
         for(let i = 0; i < angles.length; i++) {
             anglei+=toRadian(angles[i]);
             drawSnowFlakeLine(context, xi, yi, anglei, newLength, deep - 1);
-            xi = xi + newLength * Math.sin(anglei);
+            xi = xi + newLength * Math.cos(anglei);
             yi = yi - newLength * Math.sin(anglei);
         }
     }
